@@ -1,0 +1,42 @@
+* {
+    box sizing: border-box;
+}
+
+header {
+    font-size: 4vmin;
+    color: royalblue;
+    letter-spacing: 2vmin;
+}
+
+h2 {
+    color: darkgoldenrod;
+}
+
+body {
+    /* 
+        viewport units:
+        vh - viewport height
+        vw - viewport width
+        vmin - minimum between vh and vw
+        vmax - maximum between vh and vw
+    */
+
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat (10, 9vmin);
+    /* gap: 1vmin; */
+    margin-top: 2vmin;
+}
+
+
