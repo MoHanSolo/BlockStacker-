@@ -1,74 +1,61 @@
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-const ballRadius = 10;
-let x = canvas.width/2;
-let y = canvas.height-30;
-let dx = 2;
-let dy = -2;
-const paddleHeight = 10;
-const paddleWidth = 75;
-let paddleX = (canvas.width - paddleWidth) / 2;
-let rightPressed = false;
-let leftPressed = false;
+// /*----- constants -----*/
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+// /*----- state variables -----*/
+// let start; // this will be 
+// let grid; // this will be a 2d array of 20 arrays with 20 arrays with 13 values 
+// let winner; // this will be a set to null
 
-function keyDownHandler(e) {
-    if (e.key === "Right" || e.key === "ArrowRight") {
-        rightPressed = true;
-    } else if (e.key === "Left" || e.key === "ArrowLeft") {
-        leftPressed = true;
-    }
-}    
+// /*----- cached elements  -----*/
 
-function keyUpHandler(e) {
-    if (e.key === "Right" || e.key === "ArrowRight") {
-        rightPressed = false;
-    } else if (e.key === "Left" || e.key === "ArrowLeft") {
-        leftPressed = false;
-    }
-}
+// /*----- event listeners -----*/
 
-function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "#32CD32";
-    ctx.fill();
-    ctx.strokeStyle = "rgba(0, 0, 0)";
-    ctx.stroke();
-    ctx.closePath();
-}
+// /*----- functions -----*/
+// init();
 
-function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#32CD32";
-    ctx.fill();
-    ctx.closePath();
-}
-
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    drawPaddle();
-
-    if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
-    }
+// function init() {
+//   start = 1;
+//   grid = [
     
-    if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-    dy = -dy;
-    }
+//    // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 13
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 12
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 11
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 10
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 9
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 8
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 7
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 6
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 5
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 4
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 3
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 2
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 1
+//    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 0  
+// // r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15 r16 r17 r18 r19 
+//     ];
+//     winner = null;
+//     render();
+// }
 
-    if (rightPressed) {
-        paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
-    } else if (leftPressed) {
-        paddleX = Math.max(paddleX - 7, 0);
-    }
-x += dx;
-y += dy;
-}
+// function render() {
+//   renderGrid();
+//   renderMessage();
+//   renderControls();
+// }
 
+// function renderGrid() {
+//   grid.forEach(function(colArr, colIdx) {
+//     colArr.forEach(function(rowVal, rowIdx) {
+//       const cellId = `c${colIdx}r${rowIdx}`;
+//       const cellEl = document.getElementById(cellId)
+//       console.log(cellEl);
+//     });
+//   });
+// }
 
-setInterval(draw, 10);
+// function renderMessage() {
+  
+// }
+
+// function renderControls() {
+  
+// }

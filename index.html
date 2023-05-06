@@ -1,24 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockStacker!</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockStacker 2.0</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
-<header>Block Stacker!</header>
+
+<header>BlockStacker.....Born Again!</header>
 <h2>How high can you stack?</h2>
 
 <body>
-    <canvas id="myCanvas" width="500" height="1100"></canvas> 
-</body>
-<script src="js/main.js"></script>
-</html>
 
-<div>
-    <button id="button">STOP!</button>
-</div>
+
+  <section id="grid">
+
+    <div class="grid-item" id="c0r0"></div>
+    <div class="grid-item" id="c1r0"></div>
+    <div class="grid-item" id="c2r0"></div>
+    <div class="grid-item" id="c3r0"></div>
+    <div class="grid-item" id="c4r0"></div>
+    <div class="grid-item" id="c5r0"></div>
+    <div class="grid-item" id="c6r0"></div>
+    <div class="grid-item" id="c7r0"></div>
+    <div class="grid-item" id="c8r0"></div>
+    <div class="grid-item" id="c9r0"></div>
+    <div class="grid-item" id="c10r0"></div>
+    <div class="grid-item" id="c11r0"></div>
+    <div class="grid-item" id="c12r0"></div>
+
+    <div class="grid-item" id="c0r1"></div>
+    <div class="grid-item" id="c1r1"></div>
+    <div class="grid-item" id="c2r1"></div>
+    <div class="grid-item" id="c3r1"></div>
+    <div class="grid-item" id="c4r1"></div>
+    <div class="grid-item" id="c5r1"></div>
+    <div class="grid-item" id="c6r1"></div>
+    <div class="grid-item" id="c7r1"></div>
+    <div class="grid-item" id="c8r1"></div>
+    <div class="grid-item" id="c9r1"></div>
+    <div class="grid-item" id="c10r1"></div>
+    <div class="grid-item" id="c11r1"></div>
+    <div class="grid-item" id="c12r1"></div>
+
+    <div class="grid-item" id="c0r2"></div>
+    <div class="grid-item" id="c1r2"></div>
+    <div class="grid-item" id="c2r2"></div>
+    <div class="grid-item" id="c3r2"></div>
+    <div class="grid-item" id="c4r2"></div>
+    <div class="grid-item" id="c5r2"></div>
+    <div class="grid-item" id="c6r2"></div>
+    <div class="grid-item" id="c7r2"></div>
+    <div class="grid-item" id="c8r2"></div>
+    <div class="grid-item" id="c9r2"></div>
+    <div class="grid-item" id="c10r2"></div>
+    <div class="grid-item" id="c11r2"></div>
+    <div class="grid-item" id="c12r2"></div>
+
+    <div class="grid-item" id="c0r3"></div>
+    <div class="grid-item" id="c1r3"></div>
+    <div class="grid-item" id="c2r3"></div>
+    <div class="grid-item" id="c3r3"></div>
+    <div class="grid-item" id="c4r3"></div>
+    <div class="grid-item" id="c5r3"></div>
+    <div class="grid-item" id="c6r3"></div>
+    <div class="grid-item" id="c7r3"></div>
+    <div class="grid-item" id="c8r3"></div>
+    <div class="grid-item" id="c9r3"></div>
+    <div class="grid-item" id="c10r3"></div>
+    <div class="grid-item" id="c11r3"></div>
+    <div class="grid-item" id="c12r3"></div>
+
+    <div class="grid-item" id="c0r4"></div>
+    <div class="grid-item" id="c1r4"></div>
+    <div class="grid-item" id="c2r4"></div>
+    <div class="grid-item" id="c3r4"></div>
+    <div class="grid-item" id="c4r4"></div>
+    <div class="grid-item" id="c5r4"></div>
+    <div class="grid-item" id="c6r4"></div>
+    <div class="grid-item" id="c7r4"></div>
+    <div class="grid-item" id="c8r4"></div>
+    <div class="grid-item" id="c9r4"></div>
+    <div class="grid-item" id="c10r4"></div>
+    <div class="grid-item" id="c11r4"></div>
+    <div class="grid-item" id="c12r4"></div>
+
+    <div class="grid-item" id="c0r5"></div>
+    <div class="grid-item" id="c1r5"></div>
+    <div class="grid-item" id="c2r5"></div>
+    <div class="grid-item" id="c3r5"></div>
+    <div class="grid-item" id="c4r5"></div>
+    <div class="grid-item" id="c5r5"></div>
+    <div class="grid-item" id="c6r5"></div>
+    <div class="grid-item" id="c7r5"></div>
+    <div class="grid-item" id="c8r5"></div>
+    <div class="grid-item" id="c9r5"></div>
+    <div class="grid-item" id="c10r5"></div>
+    <div class="grid-item" id="c11r5"></div>
+    <div class="grid-item" id="c12r5"></div>
+
+    <div class="grid-item" id="c0r6"></div>
+    <div class="grid-item" id="c1r6"></div>
+    <div class="grid-item" id="c2r6"></div>
+    <div class="grid-item" id="c3r6"></div>
+    <div class="grid-item" id="c4r6"></div>
+    <div class="grid-item" id="c5r6"></div>
+    <div class="grid-item" id="c6r6"></div>
+    <div class="grid-item" id="c7r6"></div>
+    <div class="grid-item" id="c8r6"></div>
+    <div class="grid-item" id="c9r6"></div>
+    <div class="grid-item" id="c10r6"></div>
+    <div class="grid-item" id="c11r6"></div>
+    <div class="grid-item" id="c12r6"></div>
+
+    <div class="grid-item" id="c0r7"></div>
+    <div class="grid-item" id="c1r7"></div>
+    <div class="grid-item" id="c2r7"></div>
+    <div class="grid-item" id="c3r7"></div>
+    <div class="grid-item" id="c4r7"></div>
+    <div class="grid-item" id="c5r7"></div>
+    <div class="grid-item" id="c6r7"></div>
+    <div class="grid-item" id="c7r7"></div>
+    <div class="grid-item" id="c8r7"></div>
+    <div class="grid-item" id="c9r7"></div>
+    <div class="grid-item" id="c10r7"></div>
+    <div class="grid-item" id="c11r7"></div>
+    <div class="grid-item" id="c12r7"></div>
+
+    <div class="grid-item" id="c0r8"></div>
+    <div class="grid-item" id="c1r8"></div>
+    <div class="grid-item" id="c2r8"></div>
+    <div class="grid-item" id="c3r8"></div>
+    <div class="grid-item" id="c4r8"></div>
+    <div class="grid-item" id="c5r8"></div>
+    <div class="grid-item" id="c6r8"></div>
+    <div class="grid-item" id="c7r8"></div>
+    <div class="grid-item" id="c8r8"></div>
+    <div class="grid-item" id="c9r8"></div>
+    <div class="grid-item" id="c10r8"></div>
+    <div class="grid-item" id="c11r8"></div>
+    <div class="grid-item" id="c12r8"></div>
+
+    <div class="grid-item" id="c0r9"></div>
+    <div class="grid-item" id="c1r9"></div>
+    <div class="grid-item" id="c2r9"></div>
+    <div class="grid-item" id="c3r9"></div>
+    <div class="grid-item" id="c4r9"></div>
+    <div class="grid-item" id="c5r9"></div>
+    <div class="grid-item" id="c6r9"></div>
+    <div class="grid-item" id="c7r9"></div>
+    <div class="grid-item" id="c8r9"></div>
+    <div class="grid-item" id="c9r9"></div>
+    <div class="grid-item" id="c10r9"></div>
+    <div class="grid-item" id="c11r9"></div>
+    <div class="grid-item" id="c12r9"></div>
+
+    <div class="grid-item" id="c0r10"></div>
+    <div class="grid-item" id="c1r10"></div>
+    <div class="grid-item" id="c2r10"></div>
+    <div class="grid-item" id="c3r10"></div>
+    <div class="grid-item" id="c4r10"></div>
+    <div class="grid-item" id="c5r10"></div>
+    <div class="grid-item" id="c6r10"></div>
+    <div class="grid-item" id="c7r10"></div>
+    <div class="grid-item" id="c8r10"></div>
+    <div class="grid-item" id="c9r10"></div>
+    <div class="grid-item" id="c10r10"></div>
+    <div class="grid-item" id="c11r10"></div>
+    <div class="grid-item" id="c12r10"></div>
+
+    <div class="grid-item" id="c0r11"></div>
+    <div class="grid-item" id="c1r11"></div>
+    <div class="grid-item" id="c2r11"></div>
+    <div class="grid-item" id="c3r11"></div>
+    <div class="grid-item" id="c4r11"></div>
+    <div class="grid-item" id="c5r11"></div>
+    <div class="grid-item" id="c6r11"></div>
+    <div class="grid-item" id="c7r11"></div>
+    <div class="grid-item" id="c8r11"></div>
+    <div class="grid-item" id="c9r11"></div>
+    <div class="grid-item" id="c10r11"></div>
+    <div class="grid-item" id="c11r11"></div>
+    <div class="grid-item" id="c12r11"></div>
+
+    <div class="grid-item" id="c0r12"></div>
+    <div class="grid-item" id="c1r12"></div>
+    <div class="grid-item" id="c2r12"></div>
+    <div class="grid-item" id="c3r12"></div>
+    <div class="grid-item" id="c4r12"></div>
+    <div class="grid-item" id="c5r12"></div>
+    <div class="grid-item" id="c6r12"></div>
+    <div class="grid-item" id="c7r12"></div>
+    <div class="grid-item" id="c8r12"></div>
+    <div class="grid-item" id="c9r12"></div>
+    <div class="grid-item" id="c10r12"></div>
+    <div class="grid-item" id="c11r12"></div>
+    <div class="grid-item" id="c12r12"></div>
+
+    <div class="grid-item" id="c0r13"></div>
+    <div class="grid-item" id="c1r13"></div>
+    <div class="grid-item" id="c2r13"></div>
+    <div class="grid-item" id="c3r13"></div>
+    <div class="grid-item" id="c4r13"></div>
+    <div class="grid-item" id="c5r13"></div>
+    <div class="grid-item" id="c6r13"></div>
+    <div class="grid-item" id="c7r13"></div>
+    <div class="grid-item" id="c8r13"></div>
+    <div class="grid-item" id="c9r13"></div>
+    <div class="grid-item" id="c10r13"></div>
+    <div class="grid-item" id="c11r13"></div>
+    <div class="grid-item" id="c12r13"></div>
+
+    <div class="grid-item" id="c0r14"></div>
+    <div class="grid-item" id="c1r14"></div>
+    <div class="grid-item" id="c2r14"></div>
+    <div class="grid-item" id="c3r14"></div>
+    <div class="grid-item" id="c4r14"></div>
+    <div class="grid-item" id="c5r14"></div>
+    <div class="grid-item" id="c6r14"></div>
+    <div class="grid-item" id="c7r14"></div>
+    <div class="grid-item" id="c8r14"></div>
+    <div class="grid-item" id="c9r14"></div>
+    <div class="grid-item" id="c10r14"></div>
+    <div class="grid-item" id="c11r14"></div>
+    <div class="grid-item" id="c12r14"></div>
+
+    <div class="grid-item" id="c0r15"></div>
+    <div class="grid-item" id="c1r15"></div>
+    <div class="grid-item" id="c2r15"></div>
+    <div class="grid-item" id="c3r15"></div>
+    <div class="grid-item" id="c4r15"></div>
+    <div class="grid-item" id="c5r15"></div>
+    <div class="grid-item" id="c6r15"></div>
+    <div class="grid-item" id="c7r15"></div>
+    <div class="grid-item" id="c8r15"></div>
+    <div class="grid-item" id="c9r15"></div>
+    <div class="grid-item" id="c10r15"></div>
+    <div class="grid-item" id="c11r15"></div>
+    <div class="grid-item" id="c12r15"></div>
+
+    <div class="grid-item" id="c0r16"></div>
+    <div class="grid-item" id="c1r16"></div>
+    <div class="grid-item" id="c2r16"></div>
+    <div class="grid-item" id="c3r16"></div>
+    <div class="grid-item" id="c4r16"></div>
+    <div class="grid-item" id="c5r16"></div>
+    <div class="grid-item" id="c6r16"></div>
+    <div class="grid-item" id="c7r16"></div>
+    <div class="grid-item" id="c8r16"></div>
+    <div class="grid-item" id="c9r16"></div>
+    <div class="grid-item" id="c10r16"></div>
+    <div class="grid-item" id="c11r16"></div>
+    <div class="grid-item" id="c12r16"></div>
+
+    <div class="grid-item" id="c0r17"></div>
+    <div class="grid-item" id="c1r17"></div>
+    <div class="grid-item" id="c2r17"></div>
+    <div class="grid-item" id="c3r17"></div>
+    <div class="grid-item" id="c4r17"></div>
+    <div class="grid-item" id="c5r17"></div>
+    <div class="grid-item" id="c6r17"></div>
+    <div class="grid-item" id="c7r17"></div>
+    <div class="grid-item" id="c8r17"></div>
+    <div class="grid-item" id="c9r17"></div>
+    <div class="grid-item" id="c10r17"></div>
+    <div class="grid-item" id="c11r17"></div>
+    <div class="grid-item" id="c12r17"></div>
+
+    <div class="grid-item" id="c0r18"></div>
+    <div class="grid-item" id="c1r18"></div>
+    <div class="grid-item" id="c2r18"></div>
+    <div class="grid-item" id="c3r18"></div>
+    <div class="grid-item" id="c4r18"></div>
+    <div class="grid-item" id="c5r18"></div>
+    <div class="grid-item" id="c6r18"></div>
+    <div class="grid-item" id="c7r18"></div>
+    <div class="grid-item" id="c8r18"></div>
+    <div class="grid-item" id="c9r18"></div>
+    <div class="grid-item" id="c10r18"></div>
+    <div class="grid-item" id="c11r18"></div>
+    <div class="grid-item" id="c12r18"></div>
+
+    <div class="grid-item" id="c0r19"></div>
+    <div class="grid-item" id="c1r19"></div>
+    <div class="grid-item" id="c2r19"></div>
+    <div class="grid-item" id="c3r19"></div>
+    <div class="grid-item" id="c4r19"></div>
+    <div class="grid-item" id="c5r19"></div>
+    <div class="grid-item" id="c6r19"></div>
+    <div class="grid-item" id="c7r19"></div>
+    <div class="grid-item" id="c8r19"></div>
+    <div class="grid-item" id="c9r19"></div>
+    <div class="grid-item" id="c10r19"></div>
+    <div class="grid-item" id="c11r19"></div>
+    <div class="grid-item" id="c12r19"></div>
+
+  </section>
+
+  <div id="button" <button id="button">STOP!</button></div>
+
+</body>
+
+
+
+</html>
