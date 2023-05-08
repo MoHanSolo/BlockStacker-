@@ -4,10 +4,6 @@
     background-color: black;
     padding: 0;
     margin: 0;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  
   }
   
   body {
@@ -43,31 +39,24 @@
     margin-top: -50vmin;
     justify-content: center;
     transform: scale(0.4);
-  
-  
   }
-  
-  /* #grid>div {
-    display: flex; */
-  
   
   .grid-item {
     height: 10vmin;
     border: 1px solid lightgrey;
     grid-column: span 1;
     grid-row: span 1;
-  
   }
   
   #button {
     display: flex;
+    justify-content: center;
     background-color: #FF5733;
     color: white;
+    font-family: 'Audiowide', 'Times New Roman';
     padding: 2vmin;
-    margin-top: -50vmin;
+    margin-top: -55vmin;
     border-radius: 4vmin;
-    width: 300px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
+    width: 150px;
   }
+
