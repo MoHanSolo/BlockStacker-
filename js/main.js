@@ -1,29 +1,30 @@
 /*----- constants -----*/
-
+const COLORS = {
+    '0': 'black',
+    '1': 'limegreen'
+};
 /*----- state variables -----*/
-let start; // this will be 
+let start; // this will be the starting position of the game
 let grid; // this will be a 2d array of 20 arrays with 20 arrays with 13 values 
-let winner; // this will be a set to null
+let winner = null; // this will be a set to null
 const button = document.querySelector("button"); // this will stop the moving blocks to iterate to the next row
-const stop = document.querySelector('#stop');
+
 
 /*----- cached elements  -----*/
 
-/*----- event listeners -----*/
-    // stop.addEventListener('click', function() {
-    //     let i = 0;
+const winMessage = document.querySelector('h3');
 
-    //     let blockStop = setInterval(function() {
-    //         console.log('!')
-    //     }, 1000);
-    // });
+
+/*----- event listeners -----*/
+    
+// button.addEventListener("click", )
 
 
 /*----- functions -----*/
 init();
 
 function init() {
-  start = 1;
+// start = 1;    
   grid = [
     
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 12
@@ -51,23 +52,34 @@ function render() {
   renderControls();
 }
 
-    // function that renders the grid and it's individual cells
+    // function that renders the grid and individual cells in each array
 
 function renderGrid() {
   grid.forEach(function(colArr, colIdx) {
     colArr.forEach(function(rowVal, rowIdx) {
-        console.log(colArr, colIdx, rowVal, rowIdx)
         const cellId = `c${colIdx}r${rowIdx}`;
-        const cellEl = document.getElementById(cellId)
-        console.log(cellEl);
+        const cellEl = document.getElementById(cellId);
+        cellEl.style.backgroundColor = COLORS[rowVal]
+        
     });
   });
 }
-
+    // message that is made visible once player wins (reachs the top)
 function renderMessage() {
-  
+    if(winner) {
+        
+ }
 }
 
 function renderControls() {
-  
+  // the win message needs to be rendered conditionally 
+
+  // win message: hide while game is in play 
+  // button: hide when there is a winner
+  if(winner) {
+    winMessage.style.visibility = 'visible';
+  }
+ if(!winner) {
+    button.style.visibility = 'visible';
+ }
 }

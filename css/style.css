@@ -31,12 +31,19 @@
     font-size: 2vmin;
     font-family: 'Audiowide', 'Times New Roman';
   }
+
+  h3 {
+    color: limegreen;
+    font-size: 4vmin;
+    font-family: 'Audiowide', 'Times New Roman';
+    visibility: hidden;
+  }
   
   #grid {
     display: grid;
     grid-template-columns: repeat(13, 10vmin);
     grid-template-rows: repeat(20, 10vmin);
-    margin-top: -50vmin;
+    margin-top: -60vmin;
     justify-content: center;
     transform: scale(0.4);
   }
@@ -50,13 +57,13 @@
   
   #button {
     display: flex;
-    justify-content: center;
     background-color: #FF5733;
     color: white;
     font-family: 'Audiowide', 'Times New Roman';
     padding: 2vmin;
     margin-top: -55vmin;
     border-radius: 4vmin;
-    width: 150px;
+    justify-content: center;
+    align-items: center;
   }
 
