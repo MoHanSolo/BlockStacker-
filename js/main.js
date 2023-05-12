@@ -27,7 +27,7 @@ function init() {
 // start = 1;    
   grid = [
     
-   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // r 0
+   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 0
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 1
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 2
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 3
@@ -60,6 +60,7 @@ function stopBlocks(evt) {
   renderGrid();
   renderMessage();
   renderControls();
+  renderCell();
 }
 
     // function that renders the grid and individual cells in each array
@@ -67,12 +68,26 @@ function stopBlocks(evt) {
 function renderGrid() {
   grid.forEach(function(colArr, colIdx) {
     colArr.forEach(function(rowVal, rowIdx) {
-        const cellId = `r${rowIdx}c${colIdx}`;
+        const cellId = `c${colIdx}r${rowIdx}`;
         const cellEl = document.getElementById(cellId);
         cellEl.style.backgroundColor = COLORS[rowVal]
-        
+        cellEl.addEventListener("click", () => {
+          console.log(cellId)
+        })
+       
     });
   });
+}
+
+function renderCell() {
+  for (cell of cellId) {
+    const newArticle = document.createElement("article");
+    newArticle.setAttribute("Cell ID");
+    newArticle.innerHTML = `<h4>${cellId}</h4>`;
+    grid.appendChild(newArticle);
+  };
+
+  document.body.appendChild(sectionGrid);
 }
 
     // message that is made visible once player wins (reaches the top)
@@ -111,4 +126,4 @@ function renderControls() {
  }
 };
 
-setInterval(moveOne, 3000)
+// setInterval(moveOne, 3000)
