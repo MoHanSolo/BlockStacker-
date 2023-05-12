@@ -31,9 +31,7 @@ The blocks are set on a grid and begin at the base starting with three. As the u
 - CSS (Cascading Style Sheets)
 
 ***Screenshots***
-<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 180955.png">
-<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 181051.png">
-<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 181316.png">
+
 
 ***Next Steps***
 
