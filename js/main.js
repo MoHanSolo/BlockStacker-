@@ -17,7 +17,7 @@ const stopEls = [...document.querySelectorAll(".grid-item")];
 
 /*----- event listeners -----*/
     
-document.querySelector('#button').addEventListener('click', stopBlocks);
+// document.querySelector('#button').addEventListener('click', stopBlocks);
 
 
 /*----- functions -----*/
@@ -27,7 +27,7 @@ function init() {
 // start = 1;    
   grid = [
     
-   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 0
+   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 0
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 1
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 2
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // col 3
@@ -46,21 +46,21 @@ function init() {
     render();
 }
 
-function stopBlocks(evt) {
-  const rowIdx = stopEls.indexOf(evt.target);
-  const rowArr = grid[rowIdx];
-  console.log(rowIdx);
+// function stopBlocks(evt) {
+//   const rowIdx = stopEls.indexOf(evt.target);
+//   const rowArr = grid[rowIdx];
+//   console.log(rowIdx);
 
 
-}
+// }
 
     // calls the render function for the grid, message, and controls
   
   function render() {
   renderGrid();
-  renderMessage();
+  // renderMessage();
   renderControls();
-  renderCell();
+  // renderCell();
 }
 
     // function that renders the grid and individual cells in each array
@@ -72,23 +72,30 @@ function renderGrid() {
         const cellEl = document.getElementById(cellId);
         cellEl.style.backgroundColor = COLORS[rowVal]
         cellEl.addEventListener("click", () => {
-          console.log(cellId)
+        const articleEl = document.getElementById('position')
+        articleEl.innerHTML = `column ${colIdx} row ${rowIdx}`;
+        cellEl.style.backgroundColor = "limegreen";
         })
        
     });
   });
 }
 
-function renderCell() {
-  for (cell of cellId) {
-    const newArticle = document.createElement("article");
-    newArticle.setAttribute("Cell ID");
-    newArticle.innerHTML = `<h4>${cellId}</h4>`;
-    grid.appendChild(newArticle);
-  };
+// function renderCell() {
+//   grid.forEach(function(colArr, colIdx) {
+//     colArr.forEach(function(rowVal, rowIdx)
+//     const cellId = `c${colIdx}r{rowIdx}`;
+//     const cellEl = document.getElementById(cellId);
+//     const newArticle = document.createElement("article");
+//     newArticle.setAttribute("cellId", grid);
+//     newArticle.innerHTML = `<h4>${cellId}</h4>`;
+//     grid.appendChild(newArticle);
+//   })
+//   })
+// };
 
-  document.body.appendChild(sectionGrid);
-}
+//   document.body.appendChild(sectionGrid);
+// }
 
     // message that is made visible once player wins (reaches the top)
 
@@ -106,11 +113,11 @@ function renderCell() {
 //   renderGrid()
 // }
 
-function renderMessage() {
-    if(winner) {
+// function renderMessage() {
+//     if(winner) {
         
- }
-}
+//  }
+// }
 
 function renderControls() {
   // the win message needs to be rendered conditionally 
