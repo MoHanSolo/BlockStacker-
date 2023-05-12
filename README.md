@@ -24,6 +24,31 @@ The blocks are set on a grid and begin at the base starting with three. As the u
 
 - 6. User must reload the page in order to play again.
 
+***Technologies Used***
 
+- HTML
+- JavaScript
+- CSS (Cascading Style Sheets)
+
+***Screenshots***
+<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 180955.png">
+<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 181051.png">
+<img src="C:\Users\bmoha\Pictures\Screenshots\Screenshot 2023-05-12 181316.png">
+
+***Next Steps***
+
+- Since Blockstacker is not what I set out for it to be I have two options, continue on the point and click path and created a Connect Four or MineSweeper game as a side project or continue with BlockStacker! and finishing what I set out to create. I'm leaning more towards the latter, but we'll see. 
+
+***BlockStacker!***
+
+- Going down the BlockStacker! route, I had the idea to implement a leaderboard where I users could input their initials to show their high school which would be recorded underneath the Stop button as you scroll down. 
+- Another feature I considered was implementing a difficulty settings, so 'Easy' , 'Medium' , and 'Hard' modes that the user could choose upon loading the webpage. I would do this by implementing a modal. 
+
+***Connect Four***
+
+- Going down the Connect Four route, I would change the grid to reflect a 6x7 grid and make it so when four 'cells' are filled in there is a winner. 
+- I would also implement turns for each player so nobody could do two moves in a row.
+- Upon winning, the user would no longer be able to click on the grid and a play again button would appear at the bottom. 
 
 # BlockStacker-
+
