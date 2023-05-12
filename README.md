@@ -31,7 +31,9 @@ The blocks are set on a grid and begin at the base starting with three. As the u
 - CSS (Cascading Style Sheets)
 
 ***Screenshots***
-
+![Screenshot 2023-05-12 180955](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/ecc587fb-0302-4a77-a191-1e5096573433)
+![Screenshot 2023-05-12 181051](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/8089f865-88cd-4fae-a4fa-dd78ca4e3048)
+![Screenshot 2023-05-12 181316](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/e0d39053-0b22-4f6f-8064-a606fd500928)
 
 ***Next Steps***
 
