@@ -34,6 +34,10 @@ The blocks are set on a grid and begin at the base starting with three. As the u
 - JavaScript
 - CSS (Cascading Style Sheets)
 
+***Wire-Frame***
+
+![Excalidraw](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/acb89b1f-a606-4df1-b9b0-22a802050d5f)
+
 ***Screenshots***
 ![Screenshot 2023-05-12 180955](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/ecc587fb-0302-4a77-a191-1e5096573433)
 ![Screenshot 2023-05-12 181051](https://github.com/MoHanSolo/BlockStacker-/assets/124226939/8089f865-88cd-4fae-a4fa-dd78ca4e3048)
